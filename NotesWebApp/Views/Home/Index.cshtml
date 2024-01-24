@@ -1,0 +1,29 @@
+﻿@model Contracts.Note
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading text-center"><h4>NoteList</h4></div>
+    <div class="panel-body">
+        <form class="p-a-1" asp-action="AddNode" method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group">
+                <label asp-for="Name">Name:</label>
+                <input class="form-control" asp-for="Name" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Value">Value:</label>
+                <input class="form-control" asp-for="Value" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Priority">Priority:</label>
+                <input class="form-control" asp-for="Priority" />
+            </div>
+            <div class="text-center">
+                <br/><button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+ 

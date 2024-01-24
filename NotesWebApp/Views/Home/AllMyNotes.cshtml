@@ -1,0 +1,40 @@
+﻿@using Contracts
+@model IQueryable<Note>
+@{
+    ViewData["Title"] = "All my notes";
+}
+@if (Model != null && Model.Any())
+{
+    <div class="panel-body">
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                    <th>Priority</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var note in Model)
+                {
+                    <tr>
+                        <td>@note.Name</td>
+                        <td>@note.Value</td>
+                        <td>@note.Priority</td>
+                        <td> 
+                            <form method="post" asp-action="DeleteNode">
+                                <input type="hidden" name="id" value="@note.Id" />
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td> 
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p>No notes found.</p>
+}
