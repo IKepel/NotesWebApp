@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesWebApp", "NotesWebApp\NotesWebApp.csproj", "{B48548EC-4322-48FF-9178-9A3D0CB3EDC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotesWebApp", "NotesWebApp\NotesWebApp.csproj", "{B48548EC-4322-48FF-9178-9A3D0CB3EDC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{57393960-DBB2-4032-A132-DABC3F0B3C3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{57393960-DBB2-4032-A132-DABC3F0B3C3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesProcessor", "NotesProcessor\NotesProcessor.csproj", "{E04ECAA0-46E1-44F3-83BB-F3466A676F55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotesProcessor", "NotesProcessor\NotesProcessor.csproj", "{E04ECAA0-46E1-44F3-83BB-F3466A676F55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{64ADEA14-9927-4E2C-AFE9-AB3C5E61407D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{64ADEA14-9927-4E2C-AFE9-AB3C5E61407D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotesWpfApp", "NotesWpfApp\NotesWpfApp.csproj", "{66CD42E4-1975-46D9-AF4B-184B3B0B3DC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{64ADEA14-9927-4E2C-AFE9-AB3C5E61407D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64ADEA14-9927-4E2C-AFE9-AB3C5E61407D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64ADEA14-9927-4E2C-AFE9-AB3C5E61407D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66CD42E4-1975-46D9-AF4B-184B3B0B3DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CD42E4-1975-46D9-AF4B-184B3B0B3DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CD42E4-1975-46D9-AF4B-184B3B0B3DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CD42E4-1975-46D9-AF4B-184B3B0B3DC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

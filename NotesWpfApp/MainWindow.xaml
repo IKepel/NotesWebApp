@@ -1,0 +1,29 @@
+﻿<Window x:Class="NotesWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotesWpfApp"
+        xmlns:userControls="clr-namespace:NotesWpfApp.View.UserControls"
+        xmlns:home="clr-namespace:NotesWpfApp.View.Home"
+        mc:Ignorable="d"
+        Title="NoteList" Height="450" Width="800">
+    <Grid x:Name="grid1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Header-->
+        <userControls:NavBar/>
+        
+        <!--Main Content-->
+        <!--<home:HomePage Grid.Row="1" x:Name="Adder"/>-->
+        <home:HomePage Grid.Row="1" x:Name="Adder"/>
+        <Rectangle Grid.Row="1" x:Name="AllMyNotes" Fill="Aqua" Visibility="Hidden"/>
+        <!--<Rectangle Grid.Row="1" Fill="LightGray" />-->
+        <!--<userControls:ClearableTextBox x:Name="Namer" Grid.Row="1" Width="700" Height="40" Placeholder="Name" Visibility="Hidden"/>-->
+        <!--<userControls:ClearableTextBox Grid.Row="2" Width="700" Height="40" Placeholder="Value"/>-->
+    </Grid>
+</Window>
+
