@@ -1,28 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Contracts;
+using NotesProcessor;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace NotesWpfApp.View.Home
 {
-    /// <summary>
-    /// Interaction logic for AllMyNotes.xaml
-    /// </summary>
     public partial class AllMyNotes : UserControl
     {
-        public AllMyNotes()
+        private readonly INotesConverter _allMyNotesConverter;
+
+        public ObservableCollection<Note> NotesCollection { get; set; }
+
+        public AllMyNotes(INotesConverter notesConverter)
         {
             InitializeComponent();
+            _allMyNotesConverter = notesConverter;
+            NotesCollection = new ObservableCollection<Note>();
+            GetAllMyNotes();
+        }
+
+        private void GetAllMyNotes()
+        {
+            var allMyNotes = _allMyNotesConverter.GetAllNotes();
+            foreach (var note in allMyNotes)
+            {
+                NotesCollection.Add(note);
+            }
+            dataGrid.ItemsSource = NotesCollection;
+        }
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            var button = sender as Button;
+            if (button != null)
+            {
+                var note = button.DataContext as Note;
+                if (note != null)
+                {
+                    _allMyNotesConverter.DeleteNote(note.Id);
+                    NotesCollection.Remove(note); 
+                }
+            }
         }
     }
 }

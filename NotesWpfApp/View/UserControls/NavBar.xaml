@@ -10,8 +10,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="NoteList" BorderThickness="0" Background="White"  Height="50" Width="60" Content="NoteList" Click="NoteList_Click"/>
         <Button Grid.Column="1" x:Name="AllmyNotes" BorderThickness="0" Background="White" Width="80" Content="AllMyNotes" Click="AllmyNotes_Click"/>
+        <!--<Button Grid.Column="2" x:Name="Test" BorderThickness="0" Background="White" Width="80" Content="Test" Click="Test_Click"/>-->
     </Grid>
 </UserControl>
+

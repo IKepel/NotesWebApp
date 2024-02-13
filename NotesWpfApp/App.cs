@@ -11,6 +11,7 @@ namespace NotesWpfApp
         {
             this.mainWindow = mainWindow;
         }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             mainWindow.Show();  // отображаем главное окно на экране

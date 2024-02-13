@@ -9,7 +9,7 @@ namespace DAL
 {
     public interface INoteRepository
     {
-        IQueryable<Note> GetAllNotes();
+        IEnumerable<Note> GetAllNotes();
 
         void AddNote(Note note);
 

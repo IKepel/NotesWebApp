@@ -5,13 +5,13 @@ using System.Windows.Controls;
 
 namespace NotesWpfApp.View.UserControls
 {
-    public partial class ClearableTextBox : UserControl, INotifyPropertyChanged
+    public partial class ClearableTextBox : UserControl/*, INotifyPropertyChanged*/
     {
         private string _placeholder;
 
         private string _boundText;
 
-        public event PropertyChangedEventHandler? PropertyChanged;
+        //public event PropertyChangedEventHandler? PropertyChanged;
 
         public string Placeholder
         {
@@ -26,10 +26,10 @@ namespace NotesWpfApp.View.UserControls
         public string BoundText
         {
             get { return _boundText; }
-            set 
+            set
             {
                 _boundText = value;
-                OnPropertyChanged();
+                //OnPropertyChanged();
             }
         }
 
@@ -52,9 +52,9 @@ namespace NotesWpfApp.View.UserControls
             else tbPlaceholder.Visibility = Visibility.Hidden;
         }
 
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        //private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        //{
+        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        //}
     }
 }

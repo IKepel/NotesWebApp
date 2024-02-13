@@ -3,12 +3,9 @@ using System.Windows.Controls;
 
 namespace NotesWpfApp.View.UserControls
 {
-    /// <summary>
-    /// Interaction logic for MenuBar.xaml
-    /// </summary>
     public partial class NavBar : UserControl
     {
-        public event RoutedEventHandler OnNavBarClicked;
+        public event RoutedEventHandler? OnNavBarClicked;
 
         public NavBar()
         {
@@ -24,5 +21,10 @@ namespace NotesWpfApp.View.UserControls
         {
             OnNavBarClicked?.Invoke(this, e);
         }
+
+        //private void Test_Click(object sender, RoutedEventArgs e)
+        //{
+        //    OnNavBarClicked?.Invoke(this, e);
+        //}
     }
 }

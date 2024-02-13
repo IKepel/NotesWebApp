@@ -37,9 +37,9 @@ namespace DAL
             }
         }
 
-        public IQueryable<Note> GetAllNotes()
+        public IEnumerable<Note> GetAllNotes()
         {
-            return _context.Notes.AsQueryable();
+            return _context.Notes.AsEnumerable();
         }
     }
 }

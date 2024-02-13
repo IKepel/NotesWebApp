@@ -22,7 +22,7 @@ namespace NotesProcessor
             _repository.DeleteNote(id);
         }
 
-        public IQueryable<Note> GetAllNotes()
+        public IEnumerable<Note> GetAllNotes()
         {
             return _repository.GetAllNotes();
         }

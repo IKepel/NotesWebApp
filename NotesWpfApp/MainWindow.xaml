@@ -13,17 +13,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <!--Header-->
-        <userControls:NavBar/>
-        
-        <!--Main Content-->
-        <!--<home:HomePage Grid.Row="1" x:Name="Adder"/>-->
-        <home:HomePage Grid.Row="1" x:Name="Adder"/>
-        <Rectangle Grid.Row="1" x:Name="AllMyNotes" Fill="Aqua" Visibility="Hidden"/>
-        <!--<Rectangle Grid.Row="1" Fill="LightGray" />-->
-        <!--<userControls:ClearableTextBox x:Name="Namer" Grid.Row="1" Width="700" Height="40" Placeholder="Name" Visibility="Hidden"/>-->
-        <!--<userControls:ClearableTextBox Grid.Row="2" Width="700" Height="40" Placeholder="Value"/>-->
+        <userControls:NavBar x:Name="navBar"/>
     </Grid>
 </Window>
 

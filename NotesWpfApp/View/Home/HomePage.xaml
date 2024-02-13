@@ -6,11 +6,13 @@
              xmlns:local="clr-namespace:NotesWpfApp.View.Home"
              xmlns:userControls="clr-namespace:NotesWpfApp.View.UserControls"
              mc:Ignorable="d" 
-             Height="Auto" d:DesignWidth="800">
+             Height="Auto" d:DesignWidth="800"
+             >
+    
     <Grid x:Name="grid1"  Background="LightGray" >
         <StackPanel x:Name="mainStackPanel" Margin="10">
             <TextBlock Text="NoteList" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="0,0,0,10" />
-            <userControls:ClearableTextBox x:Name="Name" Grid.Row="1" Width="700" Height="40" Placeholder="Name" Margin="10"/>
+            <userControls:ClearableTextBox x:Name="RecordName" Grid.Row="1" Width="700" Height="40" Placeholder="Name" Margin="10"/>
             <userControls:ClearableTextBox x:Name="Value" Grid.Row="1" Width="700" Height="40" Placeholder="Value" Margin="10"/>
             <userControls:ClearableTextBox x:Name="Priority" Grid.Row="1" Width="700" Height="40" Placeholder="Priority" Margin="10"/>
             <Button x:Name="AddNotetoDb" Content="Submit" Margin="0,0,0,0" Foreground="White" FontSize="20" Height="40" Width="70" Click="AddNotetoDb_Click">
@@ -27,11 +29,6 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-
-            <!--<TextBox Margin="10" Text="{Binding ElementName=Name, Path=BoundText}"/>-->
-            <!--<TextBlock Margin="10" Text="{Binding ElementName=Value, Path=BoundText}"/>-->
-            
-            
         </StackPanel>
     </Grid>
 </UserControl>

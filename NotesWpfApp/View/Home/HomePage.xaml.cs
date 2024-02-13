@@ -1,26 +1,30 @@
 ﻿using NotesProcessor;
-using System.Windows;
 using System.Windows.Controls;
+using System.Windows;
+using Contracts;
 
 namespace NotesWpfApp.View.Home
 {
-    /// <summary>
-    /// Interaction logic for HomePage.xaml
-    /// </summary>
     public partial class HomePage : UserControl
     {
-        //public event RoutedEventHandler OnAddNotetoDb;
-        private readonly INotesConverter _notesConverter;
+        private readonly INotesConverter _homeNotesConverter;
 
         public HomePage(INotesConverter notesConverter)
         {
-            _notesConverter = notesConverter;
             InitializeComponent();
+            _homeNotesConverter = notesConverter;
         }
 
         private void AddNotetoDb_Click(object sender, RoutedEventArgs e)
         {
-            //OnAddNotetoDb?.Invoke(this, e);
+            Note note = new Note
+            {
+                Name = RecordName.BoundText,
+                Value = Value.BoundText,
+                Priority = int.Parse(Priority.BoundText)
+            };
+
+            _homeNotesConverter.AddNote(note);
         }
     }
 }

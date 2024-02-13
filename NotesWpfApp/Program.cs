@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NotesProcessor;
+using NotesWpfApp.View.Home;
 
 namespace NotesWpfApp
 {

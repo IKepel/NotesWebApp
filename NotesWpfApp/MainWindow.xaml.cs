@@ -1,32 +1,47 @@
-﻿using NotesWpfApp.View.Home;
+﻿using Contracts;
+using NotesProcessor;
+using NotesWpfApp.View.Home;
 using NotesWpfApp.View.UserControls;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace NotesWpfApp
 {
     public partial class MainWindow : Window
     {
-        private readonly NavBar navBar = new();
+        private readonly INotesConverter _notesConverter;
 
-        public MainWindow()
+        public MainWindow(INotesConverter notesConverter)
         {
             InitializeComponent();
-            grid1.Children.Add(navBar);
-            navBar.OnNavBarClicked += NavBar_Clicked;
-        }
 
+            var startHomePage = new HomePage(notesConverter);
+            grid1.Children.Add(startHomePage);
+            Grid.SetRow(startHomePage, 1);
+
+            navBar.OnNavBarClicked += NavBar_Clicked;
+            _notesConverter = notesConverter;
+        }
+        
         private void NavBar_Clicked(object sender, RoutedEventArgs e)
         {
             if (e.Source == navBar.NoteList)
             {
-                Adder.Visibility = Visibility.Visible;
-                AllMyNotes.Visibility = Visibility.Hidden;
+                var homePage = new HomePage(_notesConverter);
+                HandleNavBarButtonClick(homePage);
             }
             else
             {
-                Adder.Visibility = Visibility.Hidden;
-                AllMyNotes.Visibility = Visibility.Visible;
+                var allMyNotes = new AllMyNotes(_notesConverter);
+                HandleNavBarButtonClick(allMyNotes);
             }
+        }
+
+        private void HandleNavBarButtonClick(UserControl content)
+        {
+            grid1.Children.RemoveAt(1);
+            grid1.Children.Add(content);
+            Grid.SetRow(content, 1);
         }
     }
 }

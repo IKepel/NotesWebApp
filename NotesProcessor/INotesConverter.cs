@@ -9,7 +9,7 @@ namespace NotesProcessor
 {
     public interface INotesConverter
     {
-        IQueryable<Note> GetAllNotes();
+        IEnumerable<Note> GetAllNotes();
 
         void AddNote(Note note);
 

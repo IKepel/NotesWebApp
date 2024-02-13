@@ -17,4 +17,3 @@
                 Background="Transparent" Foreground="DarkRed" BorderThickness="0" Click="btnClear_Click"/>
     </Grid>
 </UserControl>
-<!--Text="{Binding Placeholder, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"-->
