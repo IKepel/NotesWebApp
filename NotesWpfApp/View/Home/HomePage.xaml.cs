@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Windows;
 using Contracts;
+using NotesWpfApp.View.UserControls;
 
 namespace NotesWpfApp.View.Home
 {
@@ -17,6 +18,20 @@ namespace NotesWpfApp.View.Home
 
         private void AddNotetoDb_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(RecordName.BoundText) ||
+                string.IsNullOrWhiteSpace(Value.BoundText) ||
+                string.IsNullOrWhiteSpace(Priority.BoundText))
+            {
+                MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (!int.TryParse(Priority.BoundText, out int priority))
+            {
+                MessageBox.Show("Priority must be a valid integer.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return; 
+            }
+
             Note note = new Note
             {
                 Name = RecordName.BoundText,
@@ -25,6 +40,10 @@ namespace NotesWpfApp.View.Home
             };
 
             _homeNotesConverter.AddNote(note);
+            
+            RecordName.BoundText = String.Empty;
+            Value.BoundText = String.Empty;
+            Priority.BoundText = String.Empty;
         }
     }
 }

@@ -21,10 +21,5 @@ namespace NotesWpfApp.View.UserControls
         {
             OnNavBarClicked?.Invoke(this, e);
         }
-
-        //private void Test_Click(object sender, RoutedEventArgs e)
-        //{
-        //    OnNavBarClicked?.Invoke(this, e);
-        //}
     }
 }
