@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Cont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotesWpfApp", "NotesWpfApp\NotesWpfApp.csproj", "{66CD42E4-1975-46D9-AF4B-184B3B0B3DC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesProcessor.Tests", "NotesProcessor.Tests\NotesProcessor.Tests.csproj", "{DCDFF2DF-E7D6-457A-BA32-B081E52F3A55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{66CD42E4-1975-46D9-AF4B-184B3B0B3DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CD42E4-1975-46D9-AF4B-184B3B0B3DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CD42E4-1975-46D9-AF4B-184B3B0B3DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCDFF2DF-E7D6-457A-BA32-B081E52F3A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCDFF2DF-E7D6-457A-BA32-B081E52F3A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCDFF2DF-E7D6-457A-BA32-B081E52F3A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCDFF2DF-E7D6-457A-BA32-B081E52F3A55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
